@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Compile
-        uses: react-scripts build
+        run: npm react-scripts build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
