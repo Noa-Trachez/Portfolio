@@ -9,17 +9,16 @@ on:
       - master
 
 jobs:
-
   build_react_project:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
-    - name: Install dependencies
-      run: npm install
-    - name: Compile
-      uses: react-scripts build
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: ./build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Compile
+        uses: react-scripts build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./build
