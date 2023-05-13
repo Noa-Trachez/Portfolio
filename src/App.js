@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         En production...
+         Snapchat : nono.trachez
         </p>
       </header>
     </div>
