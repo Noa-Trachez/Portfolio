@@ -1,0 +1,31 @@
+version: '3.7'
+name: sids
+services:
+  frontend-dev:
+    container_name: frontend-dev
+    build:
+      context: ./
+      dockerfile: DockerfileDev
+    volumes:
+      - "./Portfolio:/app"
+    ports:
+      - "3000:3000"
+    profiles: [dev]
+
+  frontend-prod:
+    container_name: frontend-prod
+    build:
+      context: ./
+      dockerfile: DockerfileProd
+    ports:
+      - "3000:3000"
+    profiles: [prod]
+
+volumes:
+  Portfolio:
+
+#run simple profile
+#docker compose --profile debug up
+
+#run multiple profiles
+#docker compose --profile frontend --profile debug up
