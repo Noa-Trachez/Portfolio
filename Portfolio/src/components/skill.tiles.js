@@ -27,7 +27,7 @@ export const SkillTiles = ({ name, width, height, index}) => {
                     src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-original.svg`}
                     width={width}
                     height={height}
-                    alt='skill image'
+                    alt={`skill-${name}`}
                 />
             </div>
         </motion.div>
