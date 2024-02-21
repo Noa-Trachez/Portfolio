@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import IMAGE from "../assets/logo.png";
 
 const navLinks = [
     {
@@ -36,7 +37,7 @@ const Navbar = ({ParallaxRef}) => {
         <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-20 bg-[#0C0C0C]">
             <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <button href={"/"} >
-                    <img src="/logo.png" alt={"logo"} width={50} height={50}/>
+                    <img src={IMAGE} alt={"logo"} width={50} height={50}/>
                 </button>
                 <div className="mobile-menu block md:hidden">
                     {!navbarOpen ? (
