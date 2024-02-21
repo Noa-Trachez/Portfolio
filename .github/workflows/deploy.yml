@@ -22,13 +22,13 @@ jobs:
           node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Install dependencies
-        run: cd Portfolio ; yarn install
+        run: yarn install
       - name: Build project
-        run: cd Portfolio ; npm run build
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./Portfolio/build
+          path: ./build
 
   deploy:
     environment:
